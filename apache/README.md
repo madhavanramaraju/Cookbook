@@ -67,7 +67,7 @@ Recipe:
 =======
     Create default recipe, it includes the yum package for httpd to install the apache(includes the specific version or arch) and the configuration file, it should restart the service when we modify a template that configures apache.
 
-    The Operational scripts for service start|stop|restart - service_status.rb recipe
+    The Operational scripts for service start|stop|restart - service_restart.rb recipe
 
 
 Template:
@@ -75,5 +75,5 @@ Template:
 
      Create the apache configuration(httpd.conf.erb) and index (index.html.erb) page template.
 
-     Metadata.rb contains the recipe name (default.rb, service_status.rb) and the user inputs if required.
+     Metadata.rb contains the recipe name (default.rb, service_restart.rb) and the user inputs if required.
 
