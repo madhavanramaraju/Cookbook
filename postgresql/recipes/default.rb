@@ -28,16 +28,16 @@ end
 
 template "#{node[:postgresql][:dir]}/pg_hba.conf" do
   source "pg_hba.conf.erb"
-  owner "root"
-  group "root"
+  owner "postgres"
+  group "postgres"
   mode 0600
   notifies :reload, resources(:service => "postgresql")
 end
 
 template "#{node[:postgresql][:dir]}/postgresql.conf" do
   source "postgresql.conf.erb"
-  owner "root"
-  group "root"
+  owner "postgres"
+  group "postgres"
   mode 0600
   notifies :restart, resources(:service => "postgresql")
 end
