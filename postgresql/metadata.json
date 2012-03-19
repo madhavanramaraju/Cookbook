@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+  },
+  "name": "postgresql",
+  "maintainer_email": "madhuupri@gmail.com",
+  "attributes": {
+  },
+  "license": "All rights reserved",
+  "suggestions": {
+  },
+  "platforms": {
+  },
+  "maintainer": "Madhavan R",
+  "long_description": "Description\n\nTo install and configure the postgresql server using chef.\n\nRequirements\n\nPlatform - CentOS 5.5 \n\nCookbook:\nAttributes:   \nPlatform specific\n\n  postgresql[:dir] - configuration file location.\n  postgresql[:version] - Version of postgresql to use. \n\nRecipe:\n  Create default recipe, it includes the yum package for postgresql install the pgsql(includes the specific version or arch) and the configuration file, it should restart the service when we modify a template that configures psql.\n\nTemplate:\n\n  Create the pgsql configuration(pgsql_hba.conf.erb) and postgresql server (postgresql.conf.erb) page template.\n\n  Metadata.rb contains the recipe name (default.rb) and the user inputs if required.\n\n\n",
+  "version": "0.0.1",
+  "recommendations": {
+  },
+  "recipes": {
+    "postgresql::default": "Postgresql recipe, Installs and configures Postgresql"
+  },
+  "groupings": {
+  },
+  "conflicting": {
+  },
+  "replacing": {
+  },
+  "description": "Installs/Configures postgresql",
+  "providing": {
+  }
+}
